@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Green Moon Plants & Flowers — متجر نباتات زينة وفازات وتربة وأسمدة وعروض مميزة.">
+<title>Green Moon Plants & Flowers</title>
+<style>
+:root{--g:#0b4d2b;--g2:#06391f;--gold:#e9aa22;--bg:#f7f8f5;--muted:#6d756f;--card:#fff;--line:#e5e9e5}
+*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:#17331f}a{text-decoration:none;color:inherit}
+.top{background:#06391f;color:#fff;padding:9px 5%;display:flex;justify-content:space-between;gap:15px;font-size:13px;flex-wrap:wrap}
+.header{background:#fff;padding:18px 5%;display:grid;grid-template-columns:220px 1fr 220px;align-items:center;gap:20px;border-bottom:1px solid var(--line)}
+.logo{font-size:28px;font-weight:900;letter-spacing:1px}.logo span{color:var(--gold);font-size:13px;display:block;letter-spacing:4px}.search{display:flex;border:1px solid #d9dfda;border-radius:14px;overflow:hidden}.search input{flex:1;border:0;padding:14px;font-size:16px;outline:none}.search button{width:54px;border:0;background:var(--g);color:#fff;font-size:20px}
+.cartBtn{justify-self:end;border:1px solid #dce4dd;background:#fff;padding:12px 16px;border-radius:14px;font-weight:800;cursor:pointer}.badge{background:#dc3434;color:#fff;border-radius:50%;padding:3px 7px;font-size:11px}
+.nav{background:#fff;border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:35px;padding:12px 4%;position:sticky;top:0;z-index:20}.nav a{padding:10px 4px}.nav a:hover{color:var(--g)}
+.hero{min-height:460px;background:linear-gradient(90deg,#031c0fdd,#031c0f55),url('https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1800&q=90') center/cover;display:flex;align-items:center;color:#fff;padding:50px 7%}.hero h1{font-size:58px;margin:0 0 10px}.hero h2{font-size:28px;color:#f4bb28;margin:0 0 20px}.hero p{font-size:20px;max-width:650px;line-height:1.8}.cta{display:flex;gap:12px;flex-wrap:wrap}.btn{border:0;border-radius:12px;padding:14px 22px;font-weight:800;cursor:pointer}.primary{background:var(--gold);color:#1e2b1e}.ghost{background:transparent;color:#fff;border:1px solid #fff}
+.features{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;padding:22px 5%;gap:20px;text-align:center}.feature b{display:block;font-size:17px}.feature small{color:var(--muted)}
+.section{padding:35px 5%}.section h2{text-align:center;font-size:30px}.sub{text-align:center;color:var(--muted);margin-top:-12px}.catGrid,.prodGrid,.articleGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:24px}.cat,.card,.article{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 6px 22px #00000008}.cat img,.article img{width:100%;height:170px;object-fit:cover}.cat .p,.article .p,.card .p{padding:14px}.cat{text-align:center}.cat button{margin:0 0 14px}
+.card img{width:100%;height:235px;object-fit:cover}.price{font-weight:900;font-size:20px;color:var(--g)}.old{text-decoration:line-through;color:#999;margin-left:8px}.save{display:inline-block;background:#ffe7a5;color:#6c4b00;border-radius:20px;padding:3px 8px;font-size:12px}.qty{display:flex;align-items:center;gap:10px;margin-top:12px}.qty button{width:38px;height:38px;border:1px solid #ccd6ce;background:#fff;border-radius:10px;font-size:20px;cursor:pointer}.qty span{min-width:25px;text-align:center;font-weight:800}.cardActions{display:flex;gap:8px;margin-top:10px}.cardActions button{flex:1}.detail{background:#fff;padding:28px 5%;display:grid;grid-template-columns:1fr 1fr;gap:35px}.detail img{width:100%;max-height:520px;object-fit:cover;border-radius:20px}.care{margin-top:25px;background:#f0f6f1;padding:20px;border-radius:18px}.careGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.careItem{background:#fff;padding:14px;border-radius:12px;border:1px solid #e2e9e2}.careItem b{display:block;margin-bottom:6px}
+.footer{background:#07351e;color:#fff;padding:35px 5%;margin-top:35px;display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}.footer small{color:#c7d4ca}
+.flash{position:fixed;top:90px;left:22px;z-index:50;animation:drop .7s ease;cursor:pointer}.parachute{font-size:42px;text-align:center}.flashBox{background:#fff;border:3px solid var(--gold);box-shadow:0 12px 35px #0004;border-radius:18px;padding:15px;width:280px}.timer{font-size:26px;font-weight:900;color:#c72c2c;text-align:center}
+.overlay{position:fixed;inset:0;background:#0009;z-index:80;display:none;align-items:center;justify-content:center;padding:15px}.modal{background:#fff;border-radius:22px;padding:24px;width:min(720px,100%);max-height:90vh;overflow:auto}.modal h2{margin-top:0}.close{float:left;background:#eee;border:0;border-radius:10px;padding:8px;cursor:pointer}.cartRow{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:center;padding:12px 0;border-bottom:1px solid #eee}.form input,.form textarea,.form select{width:100%;padding:13px;border:1px solid #d8e0d9;border-radius:10px;margin:7px 0;font:inherit}.scratch{position:relative;width:320px;height:180px;margin:20px auto;background:linear-gradient(135deg,#0b4d2b,#176a3d);border-radius:18px;display:grid;place-items:center;color:#fff;overflow:hidden}.scratch .cover{position:absolute;inset:0;background:linear-gradient(135deg,#b7b7b7,#eee);display:grid;place-items:center;color:#444;font-weight:900;font-size:22px;cursor:pointer;transition:.25s}.scratch .cover.reveal{transform:translateY(-110%)}.admin{padding:25px 5%}.adminGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.adminCard{background:#fff;border:1px solid var(--line);padding:18px;border-radius:16px}.admin table{width:100%;border-collapse:collapse}.admin th,.admin td{padding:10px;border-bottom:1px solid #eee;text-align:right}.hide{display:none}
+@keyframes drop{from{transform:translateY(-150px) rotate(-4deg);opacity:0}to{transform:translateY(0) rotate(0);opacity:1}}
+@media(max-width:900px){.header{grid-template-columns:1fr;}.cartBtn{justify-self:stretch}.nav{gap:14px;overflow:auto;justify-content:flex-start}.hero h1{font-size:42px}.catGrid,.prodGrid,.articleGrid{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:repeat(2,1fr)}.detail{grid-template-columns:1fr}.footer{grid-template-columns:1fr}.adminGrid{grid-template-columns:1fr}}
+@media(max-width:520px){.top{font-size:11px}.hero{min-height:430px;padding:30px 5%}.hero h1{font-size:34px}.hero p{font-size:16px}.catGrid,.prodGrid,.articleGrid{grid-template-columns:1fr 1fr;gap:10px}.card img{height:170px}.section{padding:25px 4%}.features{padding:18px 4%;gap:10px}.careGrid{grid-template-columns:1fr}.flash{left:8px;top:75px}.flashBox{width:245px}.cartRow{grid-template-columns:1fr auto}}
+</style></head>
+<body>
+<div id="app"></div>
+<script>
+const state={data:null,cart:[],qty:{},flash:null,flashTimer:null,flashGap:null,adminToken:null};
+const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+const money=n=>new Intl.NumberFormat('ar-EG',{maximumFractionDigits:0}).format(Number(n||0))+' ج';
+const getPath=()=>location.pathname;
+async function api(url,opt){const r=await fetch(url,opt);let d={};try{d=await r.json()}catch{}if(!r.ok)throw new Error(d.error||'حدث خطأ');return d}
+function render(){
+ const p=getPath();
+ if(p==='/admin') return renderAdminLogin();
+ if(p.startsWith('/product/')) return renderProduct(p.split('/').slice(2).join('/'));
+ if(p.startsWith('/magazine/')) return renderArticle(p.split('/').slice(2).join('/'));
+ return renderHome();
+}
+function flashHTML(){ return ''; }
+function shell(content){
+ const d=state.data||{settings:{},categories:[],products:[],articles:[]}; const s=d.settings||{};
+ return `<div class="top"><span>📍 ${esc(s.location||'الدقي — داخل المتحف الزراعي')}</span><span>🚚 ${esc(s.shipping_text||'توصيل لجميع أنحاء مصر')} · ☎️ ${esc(s.whatsapp||'01151054863')}</span></div>
+ <header class="header"><a class="logo" href="/">GREEN MOON<span>PLANTS & FLOWERS</span></a>
+ <div class="search"><input id="search" placeholder="ابحث عن أي نبات أو منتج..." oninput="searchProducts(this.value)"><button>⌕</button></div>
+ <button class="cartBtn" onclick="openCart()">🛒 السلة <span class="badge" id="cartCount">${cartCount()}</span> · ${money(cartTotal())}</button></header>
+ <nav class="nav"><a href="/">الرئيسية</a><a href="/store">المتجر</a><a href="#offers">🏷️ العروض</a><a href="#occasions">🎁 المناسبات</a><a href="#magazine">📖 المجلة</a><a href="#about">من نحن</a><a href="#contact">تواصل معنا</a></nav>${content}
+ <footer class="footer"><div><b>GREEN MOON PLANTS & FLOWERS 🌿</b><p>نباتات طبيعية.. حياة أجمل.</p><small>الدقي — داخل المتحف الزراعي</small></div><div><b>خدمة العملاء</b><p>واتساب: ${esc(s.whatsapp||'01151054863')}</p></div><div><b>روابط</b><p><a href="/admin">لوحة التحكم</a></p><p><a href="#magazine">المجلة</a></p></div></footer>
+ <div id="overlay" class="overlay"></div>${flashHTML()}`;
+}
+function cartCount(){return state.cart.reduce((s,i)=>s+i.qty,0)}
+function cartTotal(){return state.cart.reduce((s,i)=>s+i.price*i.qty,0)}
+function productCard(p){
+ const q=state.qty[p.id]||1, save=p.old_price&&p.old_price>p.price?p.old_price-p.price:0;
+ return `<article class="card"><a href="/product/${encodeURIComponent(p.slug)}"><img src="${esc(p.image||'')}" alt="${esc(p.name)}"></a><div class="p"><a href="/product/${encodeURIComponent(p.slug)}"><h3>${esc(p.name)}</h3></a><span class="old">${p.old_price?money(p.old_price):''}</span><span class="price">${money(p.price)}</span>${save?` <span class="save">وفر ${money(save)}</span>`:''}
+ <div class="qty"><button onclick="changeQty(${p.id},-1)">−</button><span id="q-${p.id}">${q}</span><button onclick="changeQty(${p.id},1)">+</button></div>
+ <div class="cardActions"><button class="btn primary" onclick="addToCart(${p.id})">🛒 أضف للسلة</button><button class="btn" onclick="location.href='/product/${encodeURIComponent(p.slug)}'">التفاصيل</button></div></div></article>`;
+}
+function renderHome(){
+ const d=state.data,s=d.settings||{};
+ const cats=d.categories||[];
+ const catImgs=['https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=700&q=80','https://images.unsplash.com/photo-1593691509543-c55fb32e5cee?auto=format&fit=crop&w=700&q=80','https://images.unsplash.com/photo-1509423350716-97f2360af8e4?auto=format&fit=crop&w=700&q=80','https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?auto=format&fit=crop&w=700&q=80'];
+ const featured=d.products.filter(x=>x.featured).slice(0,8); const products=featured.length?featured:d.products.slice(0,8);
+ const articles=d.articles.slice(0,4);
+ document.getElementById('app').innerHTML=shell(`<section class="hero"><div><h1>GREEN MOON</h1><h2>PLANTS & FLOWERS</h2><p>🌿 نباتات طبيعية.. حياة أجمل. أرقى أنواع النباتات الطبيعية ومستلزماتها لتحويل بيتك ومكتبك إلى مساحة خضراء تنبض بالحياة.</p><div class="cta"><button class="btn primary" onclick="location.href='/store'">🛒 ابدأ التسوق الآن</button><button class="btn ghost" onclick="document.getElementById('featured').scrollIntoView({behavior:'smooth'})">شاهد المنتجات</button></div></div></section>
+ <section class="features"><div class="feature">🌱<b>نباتات طبيعية</b><small>اختيارات بعناية</small></div><div class="feature">🛡️<b>ضمان واستبدال</b><small>دعم بعد الشراء</small></div><div class="feature">🚚<b>توصيل سريع وآمن</b><small>لجميع أنحاء مصر</small></div><div class="feature">🎧<b>خدمة عملاء</b><small>مساعدة قبل وبعد الطلب</small></div></section>
+ <section class="section" id="categories"><h2>تسوق حسب التصنيف 🌿</h2><p class="sub">اختر من مجموعتنا المتنوعة</p><div class="catGrid">${cats.map((c,i)=>`<div class="cat"><img src="${esc(c.image||catImgs[i%catImgs.length])}"><div class="p"><h3>${esc(c.name)}</h3><button class="btn primary" onclick="location.href='/store?cat=${encodeURIComponent(c.name)}'">تسوق الآن</button></div></div>`).join('')}</div></section>
+ <section class="section" id="featured"><h2>المنتجات المميزة ⭐</h2><div id="productGrid" class="prodGrid">${products.map(productCard).join('')}</div></section>
+ <section class="section" id="offers"><h2>🎁 عروض خاطفة</h2><p class="sub">عروض متغيرة بوقت محدود — السعر محسوب لحماية هامش الربح</p><div id="flashInline" class="adminCard">جاري تجهيز عرض آمن...</div></section>
+ <section class="section" id="magazine"><h2>📖 مجلة Green Moon</h2><div class="articleGrid">${articles.map(a=>`<article class="article"><img src="${esc(a.image||'')}"><div class="p"><h3>${esc(a.title)}</h3><p>${esc(a.excerpt)}</p><button class="btn primary" onclick="location.href='/magazine/${encodeURIComponent(a.slug)}'">اقرأ المقال</button></div></article>`).join('')}</div></section>`);
+ loadFlashInline();
+ startFlash();
+}
+function renderStore(filter=''){
+ const d=state.data; let products=d.products;
+ const qs=new URLSearchParams(location.search); const cat=qs.get('cat')||filter;
+ if(cat) products=products.filter(p=>p.category===cat);
+ document.getElementById('app').innerHTML=shell(`<section class="section"><h2>🛍️ المتجر</h2><p class="sub">اختر الكمية باستخدام + / − ثم أضفها إلى السلة</p><div class="prodGrid" id="storeGrid">${products.map(productCard).join('')}</div></section>`);
+}
+function renderProduct(slug){
+ document.getElementById('app').innerHTML='<div class="section">جارٍ تحميل المنتج...</div>';
+ api('/api/product/'+encodeURIComponent(slug)).then(p=>{
+   const c=p.care||{}, save=p.old_price&&p.old_price>p.price?p.old_price-p.price:0;
+   document.getElementById('app').innerHTML=shell(`<section class="detail"><div><img src="${esc(p.image||'')}" alt="${esc(p.name)}"></div><div><span class="save">${esc(p.category)}</span><h1>${esc(p.name)}</h1><p>${esc(p.description)}</p><div><span class="old">${p.old_price?money(p.old_price):''}</span><span class="price">${money(p.price)}</span> ${save?`<span class="save">وفر ${money(save)}</span>`:''}</div><div class="qty"><button onclick="changeQty(${p.id},-1)">−</button><span id="q-${p.id}">${state.qty[p.id]||1}</span><button onclick="changeQty(${p.id},1)">+</button></div><button class="btn primary" style="margin-top:12px;width:100%" onclick="addToCart(${p.id})">🛒 أضف للسلة</button>
+   <div class="care"><h2>🌱 دليل العناية بالنبات</h2><div class="careGrid">${[['☀️ الإضاءة',c.light],['💧 الري',c.water],['🌡️ الحرارة',c.temperature],['💦 الرطوبة',c.humidity],['🌱 التربة',c.soil],['🧪 التسميد',c.fertilizer],['🌤️ شمس أم ظل؟',c.shade],['⚠️ المشاكل الشائعة',c.problems],['❤️ نصائح Green Moon',c.tips]].map(x=>`<div class="careItem"><b>${x[0]}</b><span>${esc(x[1]||'سيتم تحديث هذا الجزء من لوحة التحكم.')}</span></div>`).join('')}</div></div></div></section>`);
+ });
+}
+function renderArticle(slug){
+ const a=state.data.articles.find(x=>x.slug===slug); if(!a){document.getElementById('app').innerHTML=shell('<section class="section"><h2>المقال غير موجود</h2></section>');return}
+ document.getElementById('app').innerHTML=shell(`<section class="section"><article class="adminCard"><img src="${esc(a.image||'')}" style="width:100%;max-height:450px;object-fit:cover;border-radius:18px"><h1>${esc(a.title)}</h1><p>${esc(a.excerpt)}</p><div style="line-height:2;font-size:18px">${esc(a.content).replace(/\n/g,'<br>')}</div></article></section>`);
+}
+function changeQty(id,delta){state.qty[id]=Math.max(1,Math.min(99,(state.qty[id]||1)+delta));const el=document.getElementById('q-'+id);if(el)el.textContent=state.qty[id]}
+function addToCart(id){
+ const p=state.data.products.find(x=>x.id===id); if(!p)return; const q=state.qty[id]||1; const found=state.cart.find(x=>x.id===id); found?found.qty=Math.min(99,found.qty+q):state.cart.push({id:p.id,name:p.name,price:Number(p.price),image:p.image,qty:q});updateCartBadge();toast('تمت إضافة المنتج للسلة 🛒')}
+function updateCartBadge(){const e=document.getElementById('cartCount');if(e)e.textContent=cartCount()}
+function openCart(){
+ const rows=state.cart.length?state.cart.map((i,idx)=>`<div class="cartRow"><div><b>${esc(i.name)}</b><br>${money(i.price)} × ${i.qty}</div><div class="qty"><button onclick="cartQty(${idx},-1)">−</button><span>${i.qty}</span><button onclick="cartQty(${idx},1)">+</button></div><button onclick="removeCart(${idx})">🗑️</button></div>`).join(''):'السلة فارغة';
+ document.getElementById('overlay').innerHTML=`<div class="modal"><button class="close" onclick="closeModal()">✕</button><h2>🛒 سلة التسوق</h2>${rows}<h3>الإجمالي: ${money(cartTotal())}</h3>${state.cart.length?`<button class="btn primary" onclick="openCheckout()">متابعة وإتمام الطلب</button>`:''}</div>`;document.getElementById('overlay').style.display='flex'}
+function cartQty(i,d){state.cart[i].qty=Math.max(1,Math.min(99,state.cart[i].qty+d));openCart();updateCartBadge()}
+function removeCart(i){state.cart.splice(i,1);openCart();updateCartBadge()}
+function closeModal(){document.getElementById('overlay').style.display='none'}
+function openCheckout(){
+ document.getElementById('overlay').innerHTML=`<div class="modal"><button class="close" onclick="openCart()">رجوع</button><h2>بيانات العميل</h2><div class="form"><input id="cname" placeholder="الاسم بالكامل"><input id="cphone" placeholder="رقم الموبايل"><textarea id="caddress" placeholder="العنوان بالتفصيل"></textarea><textarea id="cnotes" placeholder="ملاحظات اختيارية"></textarea></div><button class="btn primary" onclick="openScratch()">التالي 🎁</button></div>`;
+}
+function openScratch(){
+ const n=document.getElementById('cname').value.trim(),ph=document.getElementById('cphone').value.trim(),ad=document.getElementById('caddress').value.trim();
+ if(!n||!ph||!ad)return toast('من فضلك اكتب الاسم والموبايل والعنوان');
+ window.checkout={name:n,phone:ph,address:ad,notes:document.getElementById('cnotes').value.trim()};
+ document.getElementById('overlay').innerHTML=`<div class="modal" style="text-align:center"><h2>🎁 كارت الخدش</h2><p>اخدش الكارت واكتشف هديتك قبل تأكيد الطلب!</p><div class="scratch"><div id="prizeText">🎁 جائزتك</div><div id="scratchCover" class="cover" onclick="revealScratch()">خربش هنا ✨</div></div><button id="confirmBtn" class="btn primary hide" onclick="submitOrder()">تأكيد الطلب عبر واتساب 📲</button></div>`;
+}
+async function revealScratch(){
+ document.getElementById('scratchCover').classList.add('reveal');
+ try{
+  const d=await api('/api/order',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({customer:window.checkout,items:state.cart,prize:true})});
+  window.orderResult=d;
+  document.getElementById('prizeText').innerHTML='🎉 '+esc(d.prize?.name||'مبروك!')+'<br><small>سيتم احتسابها ضمن الطلب بأمان</small>';
+  document.getElementById('confirmBtn').classList.remove('hide');
+ }catch(e){toast(e.message)}
+}
+function submitOrder(){
+ if(!window.orderResult?.whatsapp)return;
+ location.href=window.orderResult.whatsapp;
+}
+function toast(msg){let x=document.createElement('div');x.textContent=msg;x.style='position:fixed;bottom:20px;right:20px;background:#07351e;color:#fff;padding:14px 18px;border-radius:12px;z-index:200';document.body.appendChild(x);setTimeout(()=>x.remove(),2200)}
+function searchProducts(q){
+ if(!state.data)return; q=q.trim().toLowerCase();
+ const products=state.data.products.filter(p=>p.name.toLowerCase().includes(q)||p.category.toLowerCase().includes(q));
+ const g=document.getElementById('productGrid')||document.getElementById('storeGrid');if(g)g.innerHTML=products.map(productCard).join('');
+}
+async function loadFlashInline(){
+ try{const o=await api('/api/flash-offer');const el=document.getElementById('flashInline');if(!el)return;el.innerHTML=`<h3>${esc(o.title||'عرض')}</h3><p>${(o.items||[]).map(i=>esc(i.name)).join(' + ')}</p><b>السعر: ${money(o.price||0)}</b>${o.regular?` · <span class="old">${money(o.regular)}</span>`:''} ${o.profit?`<span class="save">مكسب آمن ${money(o.profit)}</span>`:''}` }catch{}
+}
+async function startFlash(){
+ const s=state.data.settings||{}; const duration=Number(s.flash_duration||60),gap=Number(s.flash_gap||60);
+ let remaining=0;
+ async function next(){
+  try{const o=await api('/api/flash-offer');state.flash=o;renderFlash(o,duration);remaining=duration;clearInterval(state.flashTimer);state.flashTimer=setInterval(()=>{remaining--;const t=document.getElementById('flashTimer');if(t)t.textContent=remaining+' ثانية';if(remaining<=0){clearInterval(state.flashTimer);document.getElementById('flash')?.remove();state.flashGap=setTimeout(next,gap*1000)}},1000)}catch{}
+ }
+ setTimeout(next,3500);
+}
+function renderFlash(o,duration){
+ document.getElementById('flash')?.remove();if(!o||!o.items)return;
+ const div=document.createElement('div');div.id='flash';div.className='flash';div.innerHTML=`<div class="parachute">🪂🎁</div><div class="flashBox"><b>${esc(o.title)}</b><p>${o.items.map(i=>esc(i.name)).join(' + ')}</p><div><span class="old">${money(o.regular)}</span> <strong class="price">${money(o.price)}</strong></div><div class="timer" id="flashTimer">${duration} ثانية</div><button class="btn primary" onclick="addFlash()">خد العرض الآن</button></div>`;document.body.appendChild(div)}
+function addFlash(){if(!state.flash?.items)return;state.flash.items.forEach(i=>{const f=state.cart.find(x=>x.id===i.id);f?f.qty++:state.cart.push({id:i.id,name:i.name,price:i.price,image:i.image,qty:1})});updateCartBadge();toast('تمت إضافة العرض للسلة 🔥');document.getElementById('flash')?.remove()}
+function renderAdminLogin(){
+ document.getElementById('app').innerHTML=`<section class="admin"><div class="adminCard" style="max-width:430px;margin:40px auto"><h2>🔐 لوحة تحكم Green Moon</h2><input id="adminPass" class="form input" type="password" placeholder="كلمة مرور الإدارة" style="width:100%;padding:13px"><button class="btn primary" onclick="adminLogin()">دخول</button><p id="loginMsg"></p></div></section>`;
+}
+async function adminLogin(){try{const d=await api('/api/admin/login',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({password:document.getElementById('adminPass').value})});state.adminToken=d.token;renderAdmin()}catch(e){document.getElementById('loginMsg').textContent=e.message}}
+function adminApi(url,opt={}){opt.headers={...(opt.headers||{}),authorization:'Bearer '+state.adminToken,'content-type':'application/json'};return api(url,opt)}
+async function renderAdmin(){
+ document.getElementById('app').innerHTML=`<section class="admin"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><h1>🌿 لوحة تحكم Green Moon</h1><button onclick="location.href='/'">عرض الموقع</button></div>
+ <div class="adminGrid"><div class="adminCard"><b>المنتجات</b><h2 id="pc">...</h2></div><div class="adminCard"><b>الطلبات</b><h2 id="oc">...</h2></div><div class="adminCard"><b>المقالات</b><h2 id="ac">...</h2></div></div>
+ <div class="adminCard"><h2>➕ إضافة منتج</h2><div class="adminGrid"><input id="pn" placeholder="اسم المنتج"><input id="pslug" placeholder="الرابط (اختياري)"><input id="pcat" placeholder="التصنيف"><input id="pprice" type="number" placeholder="سعر البيع"><input id="pold" type="number" placeholder="السعر قبل الخصم"><input id="pwh" type="number" placeholder="سعر الجملة / التكلفة"><input id="pex" type="number" placeholder="تكلفة إضافية (تغليف/إلخ)"><input id="pstock" type="number" placeholder="المخزون"><input id="pimg" placeholder="رابط الصورة"></div><textarea id="pdesc" placeholder="تفاصيل المنتج" style="width:100%;padding:12px"></textarea><p>قسم العناية سيتم إنشاؤه تلقائيًا حسب التصنيف، ويمكن تعديله بعد الإضافة.</p><button class="btn primary" onclick="addAdminProduct()">إضافة المنتج</button></div>
+ <div class="adminCard"><h2>🪴 المنتجات</h2><div id="adminProducts">...</div></div>
+ <div class="adminCard"><h2>📰 المجلة</h2><div class="adminGrid"><input id="an" placeholder="عنوان المقال"><input id="aslug" placeholder="الرابط"><input id="aimg" placeholder="رابط الصورة"></div><textarea id="aex" placeholder="ملخص"></textarea><textarea id="acont" placeholder="محتوى المقال"></textarea><button class="btn primary" onclick="addArticle()">نشر المقال</button><div id="adminArticles"></div></div>
+ <div class="adminCard"><h2>⚙️ إعدادات العروض والواتساب</h2><div class="adminGrid"><input id="minProfit" type="number" placeholder="أقل مكسب"><input id="maxProfit" type="number" placeholder="أعلى مكسب"><input id="flashDuration" type="number" placeholder="مدة العرض بالثواني"><input id="flashGap" type="number" placeholder="الفاصل بين العروض بالثواني"><input id="wa" placeholder="واتساب"></div><button class="btn primary" onclick="saveSettings()">حفظ الإعدادات</button></div>
+ <div class="adminCard"><h2>📦 الطلبات</h2><div id="adminOrders">...</div></div></section>`;
+ await loadAdminData();
+}
+async function loadAdminData(){
+ const ps=await adminApi('/api/admin/products'), os=await adminApi('/api/admin/orders'), as=await adminApi('/api/admin/articles'), ss=await adminApi('/api/admin/settings');
+ document.getElementById('pc').textContent=ps.length;document.getElementById('oc').textContent=os.length;document.getElementById('ac').textContent=as.length;
+ document.getElementById('adminProducts').innerHTML=ps.map(p=>`<div style="padding:12px;border-bottom:1px solid #eee"><b>${esc(p.name)}</b> — ${money(p.price)} · جملة ${money(p.wholesale_cost)} · مخزون ${p.stock} · <a href="/product/${encodeURIComponent(p.slug)}" target="_blank">رابط</a> <button onclick="deleteProduct(${p.id})">حذف</button></div>`).join('');
+ document.getElementById('adminArticles').innerHTML=as.map(a=>`<div style="padding:12px;border-bottom:1px solid #eee"><b>${esc(a.title)}</b> · <a href="/magazine/${encodeURIComponent(a.slug)}" target="_blank">عرض</a> <button onclick="deleteArticle(${a.id})">حذف</button></div>`).join('');
+ document.getElementById('adminOrders').innerHTML=os.map(o=>`<div style="padding:12px;border-bottom:1px solid #eee"><b>#${o.id} — ${esc(o.customer_name)}</b> · ${money(o.total)} · ${esc(o.phone)} · ${esc(o.status)}<br><small>${esc(o.address)}</small> <select onchange="setOrderStatus(${o.id},this.value)"><option ${o.status==='new'?'selected':''}>new</option><option ${o.status==='confirmed'?'selected':''}>confirmed</option><option ${o.status==='shipped'?'selected':''}>shipped</option><option ${o.status==='done'?'selected':''}>done</option><option ${o.status==='cancelled'?'selected':''}>cancelled</option></select></div>`).join('');
+ document.getElementById('minProfit').value=ss.min_profit||100;document.getElementById('maxProfit').value=ss.max_profit||300;document.getElementById('flashDuration').value=ss.flash_duration||60;document.getElementById('flashGap').value=ss.flash_gap||60;document.getElementById('wa').value=ss.whatsapp||'01151054863';
+}
+async function addAdminProduct(){
+ const b={name:pn.value,slug:pslug.value,category:pcat.value,price:pprice.value,old_price:pold.value,wholesale_cost:pwh.value,extra_cost:pex.value,stock:pstock.value,image:pimg.value,description:pdesc.value};
+ if(!b.name||!b.price)return toast('اكتب اسم المنتج وسعر البيع');
+ await adminApi('/api/admin/products',{method:'POST',body:JSON.stringify(b)});toast('تمت إضافة المنتج');loadAdminData()
+}
+async function deleteProduct(id){if(confirm('حذف المنتج؟')){await adminApi('/api/admin/products/'+id,{method:'DELETE'});loadAdminData()}}
+async function addArticle(){if(!an.value)return toast('اكتب عنوان المقال');await adminApi('/api/admin/articles',{method:'POST',body:JSON.stringify({title:an.value,slug:aslug.value,image:aimg.value,excerpt:aex.value,content:acont.value})});toast('تم نشر المقال');loadAdminData()}
+async function deleteArticle(id){if(confirm('حذف المقال؟')){await adminApi('/api/admin/articles/'+id,{method:'DELETE'});loadAdminData()}}
+async function saveSettings(){await adminApi('/api/admin/settings',{method:'PUT',body:JSON.stringify({min_profit:minProfit.value,max_profit:maxProfit.value,flash_duration:flashDuration.value,flash_gap:flashGap.value,whatsapp:wa.value})});toast('تم حفظ الإعدادات')}
+async function setOrderStatus(id,status){await adminApi('/api/admin/orders/'+id,{method:'PUT',body:JSON.stringify({status})});toast('تم تحديث حالة الطلب')}
+async function boot(){
+ try{state.data=await api('/api/bootstrap'); if(getPath()==='/store')renderStore();else render()}catch(e){document.getElementById('app').innerHTML='<div class="section"><h2>تعذر تحميل المتجر</h2><p>'+esc(e.message)+'</p></div>'}
+}
+window.addEventListener('popstate',render);boot();
+</script></body></html>
