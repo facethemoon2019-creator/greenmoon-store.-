@@ -9,4 +9,4 @@ binding = "ASSETS"
 [[d1_databases]]
 binding = "DB"
 database_name = "greenmoon"
-database_id = "REPLACE_WITH_D1_DATABASE_ID"
+database_id = "ab6e9202-80b6-4647-b1e9-17da9380e85b"
